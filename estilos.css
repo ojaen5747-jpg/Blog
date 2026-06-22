@@ -1,0 +1,216 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* CUERPO */
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.8;
+}
+
+/* ENCABEZADO */
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:2.8rem;
+    margin-bottom:15px;
+    animation:aparecer 1.5s ease;
+}
+
+header p{
+    font-size:1.1rem;
+}
+
+/* MENÚ */
+
+nav{
+    background:#1e3a8a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav li{
+    margin:15px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+/* PORTADA */
+
+.hero{
+    background:white;
+    padding:60px;
+    text-align:center;
+}
+
+.hero h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    width:90%;
+    margin:30px auto;
+    display:flex;
+    gap:20px;
+}
+
+/* CONTENIDO */
+
+main{
+    flex:3;
+}
+
+/* TARJETAS */
+
+.card{
+    background:white;
+    padding:30px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+
+    animation:aparecer 1s ease;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-top:15px;
+    color:#374151;
+}
+
+.card ul,
+.card ol{
+    margin-left:25px;
+}
+
+/* BARRA LATERAL */
+
+aside{
+    flex:1;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+
+    height:fit-content;
+}
+
+aside h2{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+aside h3{
+    margin-top:20px;
+    color:#1e3a8a;
+}
+
+aside hr{
+    margin:15px 0;
+}
+
+/* PIE DE PÁGINA */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+/* ANIMACIÓN */
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* SCROLL SUAVE */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* RESPONSIVE PARA CELULAR */
+
+@media(max-width:768px){
+
+    .contenedor{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+
+    nav li{
+        text-align:center;
+    }
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .hero{
+        padding:30px;
+    }
+
+}
